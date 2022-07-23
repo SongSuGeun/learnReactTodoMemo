@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+.container{
+  margin: auto;
+  max-width: 600px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todoBlock{
+  padding: 30px;
+  margin-top: 50px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: -9px 17px 13px rgb(0 0 0 / 16%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btnStyle{
+  color: #fff;
+  border: none;
+  padding: "5px 9px";
+  border-radius: 60%;
+  /* 커서 이미지 변경 */
+  cursor: pointer; 
+  float: right;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.getStyle1{
+    padding: "30px";
+    color: red;
+    border-bottom: solid;
+    text-decoration: none;
+}
+
+.getStyle2{
+  padding: "30px";
+  color: black;
+  border-bottom: solid;
+  text-decoration: line-through;
+}
+
+.form{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.textInput{
+  flex: 9;
+  padding: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btnSubmit{
+  flex: 1;
+  cursor: pointer; 
+  float: right;
 }
+
