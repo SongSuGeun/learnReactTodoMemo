@@ -23,14 +23,14 @@
 
 .getStyle1{
     padding: "30px";
-    color: red;
+    color: black;
     border-bottom: solid;
     text-decoration: none;
 }
 
 .getStyle2{
   padding: "30px";
-  color: black;
+  color: red;
   border-bottom: solid;
   text-decoration: line-through;
 }
