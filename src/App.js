@@ -1,11 +1,10 @@
 import './App.css';
 import React, { useEffect, useState } from "react";
-import List from './components/Lists';
+import Lists from './components/Lists';
 import Form from './components/Form';
-import { DragDropContext, Droppable, Draggable} from 'react-beautiful-dnd';
-
 
 function App() {
+  console.log("--App.js 랜더링--")
   let [textValue, setTextValue] = useState("");
   let [contentData, setContentData] = useState(
     [
@@ -22,6 +21,11 @@ function App() {
     ]
   );
 
+  const onClickDeleteMemo = (id) => {
+    let contentCopy = contentData.filter(data => { return data.id != id;})
+    setContentData(contentCopy);
+  }
+
   return (
     <>
       <div className="container">
@@ -29,15 +33,15 @@ function App() {
           <div className="title">
             <h1>할일 목록</h1>
           </div>
-          <List contentData={contentData} setContentData={setContentData} />
+          <Lists contentData={contentData} setContentData={setContentData} onClickDeleteMemo={onClickDeleteMemo}/>
           <form className="form">
             <Form textValue={textValue} setTextValue={setTextValue} />
             <input className="btnSubmit" type="submit" value="추가"
               onClick={(e) => {
                 e.preventDefault();
                 if (textValue != "") {
-                  console.log(textValue);
-                  console.log(contentData)
+                  // console.log(textValue);
+                  // console.log(contentData)
                   var copy = [...contentData]
                   copy.push(
                     {
