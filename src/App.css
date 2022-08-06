@@ -5,10 +5,19 @@
 
 .todoBlock{
   padding: 30px;
-  margin-top: 50px;
+  margin-top: 30px;
   background: #fff;
   border-radius: 10px;
   box-shadow: -9px 17px 13px rgb(0 0 0 / 16%);
+}
+
+.editBtnStyle{
+  color: black;
+  border: none;
+  padding: "5px 9px";
+  border-radius: 60%;
+  cursor: pointer; 
+  float: right;
 }
 
 .btnStyle{
@@ -25,6 +34,7 @@
     padding: "30px";
     color: black;
     border-bottom: solid;
+    width: 300px;
     text-decoration: none;
 }
 
@@ -49,4 +59,3 @@
   cursor: pointer; 
   float: right;
 }
-
